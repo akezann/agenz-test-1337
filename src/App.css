@@ -1,38 +1,219 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.main-sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 1400px;
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.map-sec {
+  width: 650px;
+  height: 100vh;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.Announce-sec {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  width: 750px;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 22px 10px;
+
+}
+
+.Announce-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+.Announce-filter h1{
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Poppins";
+}
+
+.filter-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.filter-sec h2{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 6px 37px;
+  border-radius: 25px;
+  background: #00B4FF;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-filter{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.form-filter select{
+  width: 260px;
+  height: 21px;
+  color: #460AF0;
+  background: none;
+  border: 1px solid rgba(100, 100, 111, 0.7);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 4px;
+  padding: 0px 5px;
+}
+.form-filter label {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-sec {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  .map-sec {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .Announce-sec {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: -17px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    z-index: 2;
+    background: #fff;
+  }
+    .Announce-filter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 12px;
+      line-height: 15px;
+      width: 100%;
+    }
+
+    .filter-sec {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 50px;
+      width: 100%;
+    }
+
+    .Announce-filter h1{
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 15px;
+    }
+
+    .form-filter select{
+      width: 260px;
+      height: 21px;
+      color: #460AF0;
+      background: none;
+      border: 1px solid rgba(100, 100, 111, 0.7);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      border-radius: 4px;
+      padding: 0px 5px;
+    }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;    
+  }
+
+  .filter-sec h2{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    font-family: "Poppins";
+    padding: 5px 20px;
+    border-radius: 25px;
+    background: #00B4FF;
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .filter-sec h2{
+    font-size: 9px;
+    line-height: 9px;
+    font-weight: 500;
+    font-family: "Poppins";
+    border-radius: 25px;
+    padding: 5px 8px;
+    background: #00B4FF;
+    color: #fff;
+  }
+
+  .form-filter label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    width: 50px;
+  }
+  .form-filter select {
+    width: 150px;
+  }
+
+  .map-sec {
+    display: none;
+  }
+  .Announce-filter {
+    padding: 20px 10px;
   }
 }
