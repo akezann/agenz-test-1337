@@ -62,16 +62,18 @@
     display: none;
 }
 
-
-
 .mid-links ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-
+    gap: 20px;
 }
-.mid-links ul li a .polygon {
+
+.mid-links  li {
+    cursor: pointer;
+}
+
+.mid-links ul li .polygon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,8 +81,28 @@
     width: 30px;
     height: 30px;
 }
+.acheter, .credit, .estimer {
+    position: relative;
 
-.mid-links ul li a .polygon:hover {
+}
+.dropAchat , .dropEstim, .dropCredit {
+    background: #fff;
+    width: 200px;
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #00B4FF;
+    top: 35px;
+    left: 10px;
+    z-index: 990;
+    padding: 10px 15px;
+}
+
+
+
+.mid-links ul li .polygon:hover {
     transform: rotate(180deg);
     transition: all 0.4s;
 }
@@ -96,13 +118,7 @@
     font-size: 16px;
     line-height: 24px;
 }
-.mid-links ul li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-}
+
 
 .end-links ul {
     list-style: none;
@@ -115,6 +131,7 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    cursor: pointer;
 }
 
 .end-links ul .arabe img {
@@ -158,12 +175,11 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    height: 70vh;
+    height: 45vh;
     width: 100%;
     background: #fff;
     border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
     z-index: 10;
-    gap: 30px;
     margin-top: 76px;
     transition: all 1s ease;
     animation: mobile 1s;
@@ -184,20 +200,20 @@
 
 }
 
-.mid-links ul {
+.nav-mobile-screen .mid-links ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     gap: 15px;
-    padding: 20px 30px;
+    padding: 0px 30px;
 }
 
 .end-links ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    /* margin-top: -150px; */
 }
 
    .btn-mobile {

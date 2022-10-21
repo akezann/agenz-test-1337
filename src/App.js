@@ -44,14 +44,15 @@ function App() {
             </div>
           </div>
           <div className='cards'>
-              <Card icon={Heart}  image={Hotel1} price={1101.11} days={5}/>
-              <Card icon={HeartB} image={Hotel2} price={999.99} days={2}/>
-              <Card icon={Heart} image={Hotel3} price={1579.99} days={3}/>
-              <Card icon={HeartB} image={Hotel4} price={2000} days={10}/>
-              <Card icon={Heart} image={Hotel2} price={1101.11} days={5}/>
-              <Card icon={HeartB} image={Hotel3} price={999.99} days={2}/>
-              <Card icon={Heart} image={Hotel1} price={1579.99} days={3}/>
-              <Card icon={HeartB} image={Hotel4} price={2000} days={10}/>
+            {/* Card component repited multiple time , so i can use a data file contain all this cards info and map over it  */}
+              <Card icon1={HeartB} icon2={Heart} image={Hotel1} price={1101.11} days={5}/>
+              <Card icon1={Heart} icon2={HeartB} image={Hotel2} price={999.99} days={4}/>
+              <Card icon1={HeartB} icon2={Heart} image={Hotel3} price={1579.99} days={3}/>
+              <Card icon1={Heart} icon2={HeartB} image={Hotel4} price={2000} days={10}/>
+              <Card icon1={HeartB} icon2={Heart} image={Hotel2} price={1101.11} days={8}/>
+              <Card icon1={Heart} icon2={HeartB} image={Hotel3} price={999.99} days={2}/>
+              <Card icon1={HeartB} icon2={Heart} image={Hotel1} price={1579.99} days={6}/>
+              <Card icon1={Heart} icon2={HeartB} image={Hotel4} price={2000} days={10}/>
           </div>
         </div>
       </div>

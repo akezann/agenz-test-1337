@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -216,4 +217,23 @@
   .Announce-filter {
     padding: 20px 10px;
   }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00B4FF;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00B4FF;
 }

@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Card.css'
 function Card(props) {
+  const [islike, setIslike] = useState(false);
+  const handleLike = () => {
+    setIslike(!islike);
+  }
   return (
     <div className='card'>
       <div className="image">
@@ -13,7 +17,7 @@ function Card(props) {
         <h4>Announce par: MARRAKECH CONSEILS INVEST</h4>
       </div>
       <div className="par"><p>{props.days} days on agenz</p></div>
-      <div className="heart"><img src={props.icon} alt="heart" /></div>
+      <div className="heart"><img onClick={handleLike} src={islike ? props.icon1 : props.icon2} alt="heart" /></div>
     </div>
   )
 }
